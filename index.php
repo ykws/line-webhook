@@ -15,7 +15,7 @@ foreach ($jsonObject->$events as $event) {
           'text' => $event->message->text
         )
       )
-    )
+    );
     
     $curl = curl_init('https://api.line.me/v2/bot/message/reply');
     curl_setopt($curl, CURLOPT_POST, true);
