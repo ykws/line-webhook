@@ -5,7 +5,7 @@ error_log($jsonString);
 
 $jsonObject = json_decode($jsonString);
 
-foreach ($jsonObject->$events as $event) {
+foreach ($jsonObject->events as $event) {
   if ($event->type === 'message' && $event->message->type === 'text') {
     $requestBody = array(
       'replyToken' => $event->replyToken,
