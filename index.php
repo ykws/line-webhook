@@ -28,7 +28,7 @@ foreach ($jsonObject->events as $event) {
     ));
     curl_exec($curl);
     
-    if (curl_errono($curl)) error_log(curl_error($curl));
+    if (curl_errno($curl)) error_log(curl_error($curl));
     
     curl_close($curl);
   }
